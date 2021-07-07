@@ -1,0 +1,552 @@
+\chapter{实数和数列极限}
+
+\section{实数}
+
+我们从最简单的事情入手：
+
+\begin{definition}[有理数]
+  可以表示为两个整数的商的数 $r$.
+  \[r=\frac{p}{q}\]
+\end{definition}
+
+我们知道，有理数经过加减乘除不仍然为有理数，从而，全体有理数称为一个\textbf{数域}。但这也限制我们，不可能通过四则运算得到别的东西。
+
+对于产生一个有理数，我们用线段（\textbf{用数去反应长短的过程}）来进行开展：要度量一个线段，我们需要一个\textbf{单位长度}，有了标准的单位长度后，我们可以用相应的一个数来表示其长短，并且数与数之间的关系能够反映线段的长短关系。
+
+对于有理数的我们有一个结论：
+
+\begin{theorem}
+  有理数等价于有尽小数或无限循环小数。
+\end{theorem}
+
+同时，这个结论告诉我们另一个事情：并不是所有的实数都是有理数，举最常见的例子：\(\sqrt{2}\)，我们可以确定其一定不是分数。
+
+\maketip{用\textbf{无穷递降法}证明，若\(n\in N^*\)且\(n\)不是完全平方数，则\(\sqrt n\)是无理数。}
+
+\maketip{与此同时，我们知道，有理数和无理数比较而言，有理数的``数量''是微不足道的。}
+
+我们也知道一个概念：我们也可以确定我们可以不断的逼近其值，得到一个无尽不循环小数。
+
+归纳我们的观察，通过标准长度度量线段，只能出现上述三种情况：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  有尽小数
+\item
+  无尽循环小数
+\item
+  无尽不循环小数
+\end{enumerate}
+
+\maketip{有尽小数看作\(0\)的循环。}
+
+其中，我们将1、2都称为有理数，将3称为无理数，有理数和无理数统称为实数。类似的有下面的结论：
+
+从而我们可以用实数去反应一切线段的长度。现在我们可以通过一个实数对应到一个线段，如果正数表示从原点向右量，负数表示向左量，那么可以将\textbf{实数对应到数轴的点上}，这个实数称为这个点的坐标。反过来，我们需要思考数轴上的\textbf{每一个点是否都对应一个坐标}呢？答案是肯定的。严格的证明需要闭区间套定理。
+
+与此同时，我们固定正整数\(q\)，\(p\)取所有整数，那么\(p/q\)可以将数轴分成许多区间，每一个实数都位于这些区间中的一个，也就是说：
+
+对于任意的实数\(x\)，一定有唯一整数\(p\)使得：
+
+\[\frac pq \le x < \frac{p+1}{q}\]
+
+上面的这个结论也说明了，有理数集和\(\mathbb Q\)在实数集\(\mathbb R\)中是\textbf{稠密的}。
+
+\begin{quote}
+我们说 \(E\) 在 \(\mathbb R\)中稠密，当任何两个实数之间必有\(E\)中的一个数。
+\end{quote}
+
+\begin{theorem}
+	实数是连续的。
+\end{theorem}
+
+\maketip{全体实数正好充满了数轴。}
+
+\section{数列和收敛数列}
+
+\begin{definition}[数列]
+	一个接着一个，且没有尽头的数的排列，表示为
+	\[a_1, a_2,\cdots, a_n,\cdots\]
+\end{definition}
+
+\maketip{下标\(n\)没有实质上的意义，只是一个符号，称为\textbf{哑符号}。}
+
+在数列中，我们更加重视所谓的\textbf{收敛数列}。直观的理解，这样一个数列有如下性质：当\(n\)越来越大的时候，\(a_n\)就越来越接近某一个常数\(a\)。
+
+\begin{definition}[极限]
+	设\(\{a_n\}\)是一个数列，\(a\)是一个实数。如果满足对于任意的\(\varepsilon>0\)，存在\(N\in \mathbb N^*\)，使得当\(n>\mathbb N\)时，有
+	\[|a_n-a|< \varepsilon\]
+	
+\noindent 	则我们说数列当\(n\)趋于无穷大时以\(a\)为极限，写成：
+	
+	\[\lim_{n\rightarrow \infty} a_n = a\]
+	
+\noindent 	或简单记为\(a_n\rightarrow a~~(n\rightarrow \infty)\)。
+	
+我们也说数列\(\{a_n\}\)收敛于\(a\)。存在极限的数列称为收敛数列，不收敛的数列称为发散数列。
+	
+\end{definition}
+
+\maketip{
+	注意两个问题：
+
+	\begin{itemize}
+	\def\labelenumi{\arabic{enumi}.}
+	\item
+	  \(\varepsilon\)必须是任意给定的，不能用一个很小的数代替。
+	\item
+	  \(N\)一般是和\(\varepsilon\)有关。
+	\end{itemize}
+
+	例如，用\(\varepsilon\)-\(N\)方法证明下列结论：
+	
+	$$
+	\begin{aligned}
+	\lim_{n\rightarrow \infty} \frac {1} {n^\alpha} &= 0\\
+	\lim_{n\rightarrow \infty} q^n &=0 \\
+	\lim_{n\rightarrow \infty} n^{1/n} &= 1
+	\end{aligned}
+	$$
+}
+
+\section{收敛数列的性质}
+
+如果我们将开区间\((a-\varepsilon, a+\varepsilon)\)称为\(a\)的\(\varepsilon\)邻域，那么我们可以等价的写出：
+
+\begin{definition}[数列收敛的邻域定义]
+	数列\(\{a_n\}\)当\(n\rightarrow \infty\)时，收敛域实数\(a\)是指：对于任意的\(\varepsilon>0\)总存在\(N\in \mathbb N^*\)时，使得数列中除了有限项\(a_1,\cdots a_N\)以外，其他项都落在\(a\)的\(\varepsilon\)邻域内。
+\end{definition}
+
+\begin{theorem}[唯一性]
+	数列极限是唯一的。
+\end{theorem}
+
+\maketip{反证法，构造两个不交的开区间。}
+
+\begin{definition}[上界]
+	设\(\{a_n\}\)是一个数列。如果存在一个实数\(A\)，使得\(a_n\le A\)对一切\(n\in \mathbb N^*\)成立，则称数列\(\{a_n\}\)是\textbf{有上界}的，\(A\)是其的一个\textbf{上界}
+\end{definition}
+
+
+类似的定义\textbf{有下界}和\textbf{下界}。如果数列\(\{a_n\}\)既有上界也有下界，则称其为\textbf{有界数列}。
+
+\begin{theorem}[有界性]
+	收敛数列是有界的。
+\end{theorem}
+
+\maketip{利用构造一个邻域约束无限项。前面的有限项取其最大值。}
+
+\maketip{注意其逆命题不正确，即有界数列可能是\textbf{发散}的。}
+
+
+\begin{definition}[子列]
+设\(\{a_n\}\)是一个数列，\(k_i\in \mathbb N^*, i = 1, 2, 3,\cdots\)那么数列\(\{a_{k_n}\}\)是数列\(\{a_n\}\)的一个子列。
+\end{definition}
+
+\begin{theorem}
+若收敛数列\(\{a_n\}\)的极限是\(a\)，则\(\{a_n\}\)的任何一个子列都收敛于\(a\)。
+\end{theorem}
+
+\maketip{利用定义证明}
+
+\begin{inference}
+	数列收敛的充要条件是它的偶数项子列和奇数项子列都收敛于同一极限。
+\end{inference}
+
+\begin{theorem}[极限的四则运算]
+	对于收敛数列\(\{a_n\}\)和\(\{b_n\}\)，则数列\(\{a_n+b_n\}\)和数列\(\{a_nb_n\}\)都收敛，若\(\lim_{n\rightarrow \infty} b_n\ne 0\) 则数列\(\{a_n/b_n\}\)收敛，且有极限和四则运算可交换。
+\end{theorem}
+
+\maketip{用\(\varepsilon\)-\(N\)方法证明。}
+
+\begin{definition}[无穷小]
+	如果收敛数列\(\{a_n\}\)的极限等于
+	0，那么我们称这个数列为一个\textbf{无穷小数列}，简称为\textbf{无穷小}。
+\end{definition}
+
+\maketip{注意无穷小表示一个数列。}
+
+\begin{theorem}
+	对于无穷小，有以下定理成立：
+	
+	\begin{itemize}
+		\def\labelenumi{\arabic{enumi}.}
+		\item
+		\(\{a_n\}\)是无穷小的充要条件为数列\(\{|a_n|\}\)是无穷小。
+		\item
+		两个无穷小的和（或差）是无穷小。
+		\item
+		\(\{a_ n\}\)是无穷小，\(\{c _ n\}\)是一个有界数列，那么\(c_n a _ n\)也是无穷小。
+		\item
+		设\(0\le a_ n\le b _ n\)，\(\{b_n\}\)是无穷小，那么\(\{a_n\}\)也是无穷小。
+		\item
+		\(\lim_{n\rightarrow \infty}a_n = a\)的充要条件是\(\{a_n-a\}\)是无穷小。
+	\end{itemize}
+\end{theorem}
+
+\maketip{借助该定理，我们可以得到两个重要结论：}
+
+若\(a_n \rightarrow a\quad(n\rightarrow \infty)\)那么：
+
+\[\frac{a_1+a_2+\cdots + a_n}{n} \rightarrow a\quad (n\rightarrow \infty)\]
+
+若\(a_n \rightarrow a\quad(n\rightarrow \infty)\)，\(b _ n \rightarrow a\quad(n\rightarrow \infty)\)那么：
+
+\[\frac{a_1 b _ n + a _ 2 b _ {n-1}+\cdots + a _ n b _ 1}{n} = ab\quad(n\rightarrow \infty)\]
+
+\begin{theorem}[夹逼原理]
+	若\(a_n\le b_n\le c_n~~n\in\mathbb N^*\)，且\(a_n \rightarrow a\quad(n\rightarrow \infty)\)，\(c_n \rightarrow a\quad(n\rightarrow \infty)\)，则：有\(b_n \rightarrow a\quad(n\rightarrow \infty)\)
+\end{theorem}
+
+\maketip{该定理在计算一些极限的时候非常有用。例如：
+	\begin{itemize}
+	
+	\item
+	  对于\(a>1\)，\(a^{1/n}\rightarrow 1\quad(n\rightarrow \infty)\)；
+	\item
+	  对于\(a>1,k\in \mathbb N^*\) 有 \(\{n^k/a^n\}\) 是无穷小。
+	\end{itemize}
+}
+
+\begin{theorem} 收敛数列成立以下不等式：
+
+\begin{enumerate}
+\def\labelenumi{\textnormal{\arabic{enumi}.}}
+\item
+  若\(\lim_{n\rightarrow \infty} a_n=a\)，\(\alpha,\beta\)满足\(\alpha<a<\beta\)，那么当\(n\)充分大的时候，\(\alpha<a_n<\beta\)
+\item
+  若\(a_n \rightarrow a, b_n\rightarrow b\)，且\(a<b\)则\(n\)充分大的时候，一定有\(a_n<b_n\)
+\item
+  若\(a_n \rightarrow a, b_n\rightarrow b\)，那么当\(n\)充分大的时候，\(a_n \le b _ n\)则\(a \le b\)
+\end{enumerate}
+\end{theorem}
+
+\maketip{充分大，是指存在$N\in \NN$时，使得对任意的$n > N$都满足某个条件。}
+
+\begin{example} 求证 $\displaystyle \lim_{n\rightarrow \infty} \frac{n^k}{a^n} = 0$，其中$k$为正整数。
+\end{example}
+
+\maketip{注意其中$k$是固定的。在证明的时候，应当注意这个序列中什么是变得什么是不变的}
+
+\section{数列极限的概念和推广}
+
+\begin{definition}[正无穷大]
+	若数列\(\{a_n\}\)满足条件：对于正数\(A\)都存在\(N\in \mathbb N\)，有当\(n>N\)时，\(a_n > A\)那么数列\(\{a _ n\}\)趋向\(+\infty\)，记作：
+	
+	$$
+		\lim_{n\rightarrow \infty}a_n = + \infty
+	$$
+\end{definition}
+
+同样定义趋向负无穷大\(-\infty\)。
+
+\begin{definition}[无穷大]
+	若\(|a_n|=\infty\)则称\(\{a_n\}\)趋向于\(\infty\)，记作\[\lim_{n\rightarrow \infty}a_n=\infty\]
+\end{definition}
+
+三种情形下，我们都将数列$\{a_n\}$称为无穷大。
+
+\begin{theorem} 无穷大有如下的性质：
+
+\begin{enumerate}
+\def\labelenumi{\textnormal{\arabic{enumi}.}}
+\item
+  无穷大是无界的。
+\item
+  无界数列能选出一个子列是无穷大。
+\item
+  若\(\lim_{n\rightarrow \infty}a_n=+\infty\)那么其子列的极限\(\lim_{n\rightarrow \infty} a_{k_n} = +\infty\)。
+\item
+  \(\{a_n\}\)是无穷大的充要条件是\(\{1/a_n\}\)是无穷小。
+\end{enumerate}
+
+\end{theorem}
+
+\section{单调数列}
+
+\begin{definition}[单调数列、递增、递减]
+若数列\(\{a_n\}\)满足\(a_n \le a _ {n+1}\)，则称之为递增数列，若满足\(a_n \ge a _{n+1}\)则称之为递减数列。递增和递减的数列称为单调数列。
+\end{definition}
+
+\begin{theorem}
+	单调且有界的数列收敛的。\label{thm-monotonic-convergence-principle}
+\end{theorem}
+
+\maketip{这个定理是非常重要的，读者应当牢记，并用于各类场景中。}
+
+\begin{theorem}[闭区间套定理]
+设\(I_n=[ a _ n, b _ n ] ( n\in \mathbb N )\)，且
+\(I_1\supset I_2\supset \cdots \supset I_n\supset I_{n+1} \supset\cdots\)，若区间的长度\(b_n-a_n\rightarrow 0\)
+则交集 \(\cap_{n=1}^\infty I_n\)含有唯一的点。
+\end{theorem}
+
+\maketip{该定理解答了在前文提到的问题，也就是解决了每一个实数都对应于数轴上的某个点的坐标的证明。}
+
+\section{自然对数的底 $e$}
+
+考察这样的两个数列：
+
+$$
+e_n = \left(1+\frac 1 n\right)^n
+$$
+
+$$
+s_n=1+\frac{1}{1!}+\frac{1}{2!}+\cdots
+$$
+
+显然，数列$\{s_n\}$是严格递增的，且因：
+
+$$
+s_n\le 1 + 1 + \frac{1}{2} + \frac{1}{2^2} + \cdots < 3
+$$
+
+同时，观察数列 $\{e_n\}$，其也满足单调递增且$e_n\le s_n <3$。
+
+实际上，这两个数列收敛于同一极限 $e$。
+
+\begin{definition}[自然对数的底 $e$]
+	\[\lim_{n\rightarrow \infty}\left(1+\frac{1}{1!} + \frac{1}{2!}+\cdots\right)=e\]
+\end{definition}
+
+\begin{theorem}
+	自然对数的底$e$是\textbf{无理数}
+\end{theorem}
+
+\maketip{用反证法证明，首先假设 $e=p/q$ 那么
+	\[0< q!(e-s_q)\le \frac 1 q \le \frac 1 2\]
+	但是，代入我们之间的假设：
+	\[q!(e-s_q) = (q-1)!p - q!\left(1 + 1 + \cdots + \frac{1}{q!}\right)\]
+	得到了矛盾，从而可以说明$e$ 是有理数。
+}
+
+\maketip{这告诉我们一个事实：对有理数做有限次四则运算仍然是有理数，但做无限次后不一定还是有理数，$e$就是一个很好的例子。}
+
+\section{基本列和Cauchy收敛原理}
+
+\begin{definition}[基本列]
+	设$\{a_n\}$是一个是数列，对于任意给定的$\varepsilon > 0$，若存在$N\in\NN$，当$m,n\in \NN$且 $m,n>N$ 时，有
+	\[
+		|a_m - a_n| < \varepsilon
+	\]
+	
+\noindent 成立，则称$\{a_n\}$为一个\textbf{基本列}或\textnormal{Cauchy}列
+\end{definition}
+
+\noindent 例如：
+
+\begin{enumerate}
+	\item $|q|\le 1$ 则 $\{q^n\}$为基本列。
+	\item $\{(-1)^n\}$ 不是基本列。
+	\item 当$\alpha \le 1$ 时，$a_n = 1 + \frac{1}{2 ^ \alpha} +\cdots + \frac{1}{n^\alpha}$ 不是基本列。
+\end{enumerate}
+
+下面我们用几个定理引出一个重要的基本事实：数列收敛的充要条件为，该数列是基本列。
+
+\begin{lemma}
+	任意一个数列中都能取出一个单调的子数列。
+\end{lemma}
+
+\maketip 先找出''龙头''（该项比之后的每一项都大）分情况讨论有无穷多个龙头（直接取出''龙头''，单调递减）、和有限个龙头（可以找到单调递增数列）的情况即可。
+
+\begin{theorem}[Bolzano-Weierstrass定理]
+	有界数列中必有收敛的子列。\label{thm-Bolzano-Weierstrass}
+\end{theorem}
+
+\maketip 至此该定理是容易证明的，利用上述引理\ref{thm-Bolzano-Weierstrass}和定理\ref{thm-monotonic-convergence-principle}即可。
+
+\begin{theorem}[Cauchy 收敛原理]\label{thm-cauchy-convergence}
+	数列收敛的充要条件是，它是基本列。
+\end{theorem}
+
+\maketip 必要性是容易证明的。充分性通过选择从中选择出一个收敛子列，在证明其极限也是$\{a_n\}$的极限即可。
+
+\maketip Cauchy 收敛原理的意义在于：当判断一个数列的收敛性的时候，我们可以\textbf{只关注}这个数列本身，而非求助于其他的数（极限值）。与此同时Bolzano-Weierstrass定理和Cauchy收敛原理也是实数的连续性的另一种体现。
+
+\section{上确界和下确界}
+
+\begin{definition}[上界、下界]
+	若 $E$ 是实数构成的集合，如果存在一个实数 $A$，使得对任何的 $x\in E$，都有 $x\ge A$ 那么我们称$A$为 $E$ 的一个\textbf{下界}；对应的，若存在 $B$，使得对任何 $x\in E$，都有$x\le B$则称 $B$ 为 $E$ 的一个\textbf{上界}。
+\end{definition}
+
+
+\begin{definition}[上确界]
+	设 $E$ 是一非空的有上界的集合，若实数 $\beta$ 满足：
+	\begin{enumerate}
+		\item 对任何 $x\in E$，有 $x\le \beta$；
+		\item 对任何给定的 $\varepsilon > 0$，都有一个 $x_\varepsilon\in E$ 使得 $x_\varepsilon > \beta - \varepsilon$
+	\end{enumerate}
+	则称$E$的上确界为$\beta$，记为 $\sup E$。
+\end{definition}
+
+\begin{definition}[下确界]
+	设 $E$ 是一非空的有下界的集合，若实数 $\alpha$ 满足：
+	\begin{enumerate}
+		\item 对任何 $x\in E$，有 $x\ge \alpha$；
+		\item 对任何给定的 $\varepsilon > 0$，都有一个 $x_\varepsilon\in E$ 使得 $x_\varepsilon > \alpha + \varepsilon$
+	\end{enumerate}
+	则称$E$的下确界为$\alpha$。记作 $\inf E$。
+\end{definition}
+
+\begin{example}
+	$$
+	\begin{aligned}
+	& \inf(0,1) = 0 & \sup (0, 1) = 1\\
+	& \inf\left\{\frac 1 n, n\in \NN\right\} = 0 & \sup\left\{\frac 1 n, n\in \NN\right\}=1
+	\end{aligned}
+	$$
+\end{example}
+
+\maketip{这表明了有界集合的最大/最小值不一定存在，但是上/下确界一定存在。}
+
+
+\begin{theorem}[确界存在定理]\label{thm-supremum-axiom}
+	非空的有上界的集合必有上确界；非空的有下界的集合必有下确界。
+\end{theorem}
+
+\maketip{使用闭区间套定理，构造$I_n=[a_n, b_n]$ 使得$I_n$的右端点的右边没有$E$中的点，$I_n$中总有$E$中的点即可。}
+
+\maketip{这也是实数连续性的一种体现。}
+
+
+\begin{inference}[确界的性质]
+	若$F=-E$，则：
+	$$
+	-\sup F = \inf E
+	$$
+\end{inference}
+
+\section{有限覆盖定理}
+
+在这里介绍与实数连续性等价的最后一个命题，为此引入一些定义。
+
+\begin{definition}[开覆盖]
+	如果 $A$ 是实数集，$\mathcal F = \{I_\lambda\}$，其中$\lambda \in \Lambda$，$\Lambda$为指标集。如果
+	$$
+		A\subset \bigcup_{\lambda \in \Lambda} I_\lambda
+	$$
+	那么称开区间族$\{I_\lambda\}$是$A$的一个开覆盖。
+\end{definition}
+
+
+\begin{theorem}[紧致性定理]\label{thm-Heine-Borel}
+	设 $[a,b]$ 是一个有限的闭区间，且有一个开覆盖 $\{I_\lambda\}$，那么从其中必定可以选出有限个开区间来，这些开区间组成的开区间族依然是$[a,b]$的开覆盖。
+\end{theorem}
+
+\maketip{这个定理也就是\textbf{有限覆盖定理}。}
+
+至此我们介绍了六个定理：
+
+\begin{enumerate}
+	\item 单调有界原理（定理\ref{thm-monotonic-convergence-principle}）
+	\item Bolzano-Weierstrass 定理（定理\ref{Bolzano-Weierstrass}）
+	\item Cauchy收敛原理（定理\ref{thm-cauchy-convergence}）
+	\item 确界原理（定理\ref{thm-supremum-axiom}）
+	\item 紧致型原理（定理\ref{thm-Heine-Borel}）
+\end{enumerate}
+
+这六条定理都是实数系统的等价描述。从其中的任何一条定理都可以推导出其他定理。
+
+\maketip{如果不将无理数添加进来，这些定理不在成立！}
+
+\section{上极限和下极限}
+
+我们将数列$\{a_n\}$的收敛子列的极限称为$\{a_n\}$的一个极限点。对于收敛数列而言，其极限点存在且唯一。
+
+\begin{definition}[上极限、下极限]\label{def-uplim}
+	设 $\{a_n\}$ 是一个数列，$E$是由 $\{a_n\}$ 全部极限点构成的集合，记：
+	$$
+	\limsup_{n\rightarrow \infty}=a^*=\sup E,\quad \liminf_{n\rightarrow \infty}=a_*=\inf E
+	$$
+	其中，$a^*$为数列$\{a_n\}$的\textbf{上极限}，$a_*$称为数列$\{a_n\}$的\textbf{下极限}。
+\end{definition}
+
+\begin{example} 
+	$$
+	a_n = \frac{(-1)^n}{1 + 1/n} \quad \Rightarrow \limsup_{n\rightarrow \infty} a_n = 1
+	$$
+\end{example}
+
+\begin{theorem}
+	设$\{a_n\}$为一个数列，$E$和$a^*$的含义如定义\ref{def-uplim}中所示，则
+	\begin{itemize}
+		\item $a^*\in E$；
+		\item 若$x>a^*$ 则存在$N\in \NN$，使得$n\ge \NN$时，$a_n < x$；
+		\item $a^*$ 是满足前两条性质的唯一数。
+	\end{itemize}
+\end{theorem}
+
+\maketip{该性质表明，数列的上/下极限，是它的一切收敛的子列的极限组成的集合的最大/小这。一个数列可能没有极限，但其上下极限是存在的。}
+
+\begin{theorem}
+	设$\{a_n\}$，$\{b_n\}$是两个数列，则
+	\begin{enumerate}
+		\item $\liminf_{n\rightarrow \infty} a_n \le \limsup_{n\rightarrow \infty} a_n$
+		\item $\lim_{n\rightarrow \infty} a_n = a$ 当且仅当 $\liminf_{n\rightarrow \infty} a_n = \limsup_{n\rightarrow \infty} a_n = a$
+		\item 若 $N$ 是正整数，当 $n > N$ 时，$a_n \le b_n$ 那么：
+		
+		$$
+		\liminf_{n\rightarrow \infty} a_n \le \liminf_{n\rightarrow \infty}  b_n,\quad 
+		\limsup_{n\rightarrow \infty} a_n \le \limsup_{n\rightarrow \infty} b_n
+		$$
+	\end{enumerate}
+\end{theorem}
+
+\begin{example}
+	若 $\forall m,n\in NN, 0 \le a_{m+n} \le a_m + a_n$ 则数列 $\{a_n/n\}$ 存在极限。
+\end{example}
+
+\maketip{取$n=mk+l$，先固定$k$，让$n\rightarrow \infty$，取$a_n/n$的上极限，再对$k$取极限。}
+
+\begin{theorem}
+	对于数列$\{a_n\}$定义 $\alpha_n = \inf_{k\ge n}a_k,\beta_n = \sup_{k\ge n}a_k$ 那么：
+	
+	\begin{enumerate}
+		\item $\{\alpha_n\}$是递增数列，$\{\beta_n\}$是递减数列；
+		\item $\lim_{n\rightarrow \infty} a_n = a_*, \lim_{n\rightarrow \infty} \beta_n = a^*$
+	\end{enumerate}
+\end{theorem}
+
+\section{Stolz定理}
+
+Stolz定理是上、下极限的应用。
+
+\begin{theorem}[Stolz, $\infty \over \infty$ 形]
+	设$\{b_n\}$是严格单调递增且趋于$+\infty$ 的数列，如果：
+	
+	$$
+	\lim_{n\rightarrow \infty} \frac{a_n - a_{n-1}}{b_n - b_{n-1}} = A
+	$$
+	
+\noindent	那么
+
+	$$
+	\lim_{n\rightarrow \infty} \frac{a_n}{b_n} = A
+	$$
+\end{theorem}
+
+\maketip{使用上下极限和夹逼定理证明该定理。}
+
+\begin{example}
+	$$
+	\lim_{n\rightarrow \infty} x_n=a \Rightarrow \lim_{n\rightarrow \infty} \frac{x_1 + x_2 + \cdots + x_n}{n} = a
+	$$
+\end{example}
+
+\begin{example}
+	设$k$为正整数，那么：
+	$$
+	\lim_{n\rightarrow \infty} \frac{1^k + 2 ^ k + \cdots + n ^ k}{n^k+1} = \frac{1}{k+1}
+	$$
+\end{example}
+
+
+
+
+
+
+
+
+
+
+

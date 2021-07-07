@@ -1,0 +1,44 @@
+\documentclass[UTF8, a4paper, oneside]{scrbook}
+\usepackage{ctex}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath, amsfonts}
+\usepackage{ifxetex,ifluatex}
+\usepackage[bookmarks=true, CJKbookmarks=true]{hyperref}
+\usepackage{enumitem}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=blue,      
+	urlcolor=blue,
+	citecolor=cyan,
+}
+
+
+\newcommand{\maketip}[1][~]{\noindent{\large\textsc{Tip:}} #1}
+
+\newtheorem{theorem}{定理}[section]
+\newtheorem{definition}{定义}[section]
+\newtheorem{inference}{推论}[section]
+\newtheorem{proof}{证明}[section]
+\newtheorem{lemma}{引理}[section]
+\newtheorem{example}{例}[section]
+
+\def\NN{\mathbb{N}^*}
+
+
+\title{数学分析教程概要}
+\author{Jerry Yang}
+\date{\today}
+
+\begin{document}
+\maketitle
+\frontmatter
+\tableofcontents
+\mainmatter
+
+\part{极限理论}
+
+\include{part1/ch1}
+
+\backmatter
+\end{document}
