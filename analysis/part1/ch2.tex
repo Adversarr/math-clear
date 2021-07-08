@@ -1,0 +1,40 @@
+\chapter{函数的连续性}
+
+本章重点：
+
+\begin{enumerate}
+    \item 函数的概念
+    \item 函数的极限
+    \item 连续函数
+\end{enumerate}
+
+\section{集合的映射}
+
+\begin{definition}[映射]
+    设 $A,B$ 是两个集合，若 $f$ 表示一个规律，使得对于 $A$ 中的任何一个元素 $x$ 都有 $B$ 中的唯一元素（记为$f(x)$）与之对应，则称 $f$ 是一个从 $A$ 到 $B$ 的映射。用 $f:A\rightarrow B$ 表示。其中，$A$ 叫做映射 $f$ 的\textbf{定义域}，$f(x)\in B$ 是$x$ 在映射 $f$ 下的\textbf{像}。
+\end{definition}
+
+\maketip 一个映射需要有两个基本要素：
+
+\begin{enumerate}
+    \item 定义域 $A$；
+    \item 规律 $f$，即规定了这种二元关系。
+\end{enumerate}
+
+\begin{definition}[函数的相等]
+    设 $f:A\rightarrow B$ 且 $g:A\rightarrow B$。若 $\forall x\in A$ 有 $f(x) = g(x)$，则称 $f$ 和 $g$ 相等，记作 $f=g$。
+\end{definition}
+
+\begin{definition}[满射]
+    设 $f:A\rightarrow B$。如果 $f(A) = B$ 则称 $f$ 是从 $A$ 到 $B$ 的满射。
+\end{definition}
+
+\maketip{一般的，设$E\subseteq A$，$f(E)$ 是指 $\{f(x): x\in E\}$}
+
+\begin{definition}[单射]
+    设 $f:A\rightarrow B$。对于任意 $x,y\in A,x\ne y$ 有 $f(x) \ne f(y)$，则 $f$ 为单射。
+\end{definition}
+
+\begin{definition}[一一映射]
+    设 $f:A\rightarrow B$。若 $f$ 既是单射，又是满射，则称 $f$ 为一一映射。
+\end{definition}

@@ -1,9 +1,14 @@
-\documentclass[UTF8, a4paper, draft]{ctexbook}
+\documentclass[UTF8, a4paper, oneside]{scrbook}
 \usepackage{amsmath}
 \usepackage{ctex}
 \usepackage{amsfonts}
 \usepackage{enumitem}
-
+\usepackage{hyperref}
+\hypersetup{
+	CJKbookmarks=true,
+	colorlinks=true,
+	allcolors=blue
+}
 
 \newtheorem{theorem}{定理}[section]
 \newtheorem{axiom}{公理}[section]
@@ -11,7 +16,7 @@
 \newtheorem{proof}{证明}[section]
 \newtheorem{lemma}{引理}[section]
 \newtheorem{corollary}{推论}[section]
-
+\newcommand{\example}{\noindent \textbf{{\heiti 例}}\quad}
 
 \newcommand{\maketip}[1][~]{{\noindent\textsc{{\large Tips}}\space\space{#1}}}
 

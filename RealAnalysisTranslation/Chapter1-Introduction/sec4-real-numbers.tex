@@ -1,0 +1,131 @@
+\section{实数}
+
+\subsection{实数定义}
+
+\begin{definition}[有理数列]
+	设 $m\in \mathbb Z$ 有理数列$\{a_n\}_{n=m}^\infty$是指任意的函数，从 $X=\{n\in \mathbb Z:n\ge m\}$ 映射到 $\mathbb Q$。更详细的说，其可以写作一列有理数：
+	
+	$$
+	a_m,a_{m+1},a_{m+2},\cdots
+	$$
+\end{definition}
+
+\maketip 特别的，如果 $a_n=c\in \mathbb Q,\forall n\in X$ 则我们记作：
+
+$$
+\{c\}_{n=m}^\infty = \{a_n\}_{n=m}^\infty
+$$
+
+\begin{definition}[有理柯西列]
+	设有理数列 $\{a_n\}_{n=1}^\infty$，其被称为柯西列，当对于任意有理数$\varepsilon>0$存在正整数 $N$ 使得对于任意$m,n\ge N$，有$|a_m-a_n|< \varepsilon$。
+\end{definition}
+
+\begin{definition}[有理柯西列的等价性]
+	设 $\{a_n\}_{n=1}^\infty$ 和 $\{b_n\}_{n=1}^\infty$ 都是柯西列，若 $\forall \varepsilon \in Q,\varepsilon > 0$，都存在自然数 $N$，使得对于任意 $n\ge N$ 有 $|a_n-b_n|< \varepsilon$，则称 $\{a_n\}_{n=1}^\infty$ 和 $\{a_n\}_{n=1}^\infty$ 是等价的。
+\end{definition}
+
+\begin{lemma}[有理柯西列的子列]
+	有理柯西列的所有子列都是有理柯西列，且与原列等价。
+\end{lemma}
+
+\begin{lemma}[有界性]
+	有理柯西列是有界的。
+\end{lemma}
+
+\begin{lemma}[加法、乘法封闭性]
+	两个有理柯西列的和/积是有理柯西列。
+\end{lemma}
+
+\begin{lemma}
+	设 $\{a_n\}^\infty_{n=1},\{a_n'\}^\infty_{n=1},\{b_n\}^\infty_{n=1},\{b_n'\}^\infty_{n=1}$ 是四个柯西序列，
+\end{lemma}
+
+\begin{definition}[实数]
+	\textbf{实数是有理柯西列}；实数的相等，定义为有理柯西列的等价。
+\end{definition}
+
+\begin{definition}[实数的加法]
+	设 $a=\{a_n\}^\infty_{n=1}$ 和 $b=\{b_n\}^\infty_{n=1}$ 是两个实数，则其加法定义为：
+	
+	$$
+	a+b = \{a_n+b_n\}^\infty_{n=1}
+	$$
+\end{definition}
+
+\begin{definition}[实数的乘法]
+	设 $a=\{a_n\}^\infty_{n=1}$ 和 $b=\{b_n\}^\infty_{n=1}$ 是两个实数，则其乘法定义为：
+	
+	$$
+	ab = \{a_n b_n\}^\infty_{n=1}
+	$$
+\end{definition}
+
+\begin{definition}[实数的相反数]
+	设 $a = \{a_n\}^\infty_{n=1}$ 是实数，则其相反数（记为$-a$）为
+	
+	$$
+	-a= \{-1\}^\infty_{n=1} \times \{a_n\}^\infty_{n=1} = \{-a_n\}^\infty_{n=1}
+	$$
+\end{definition}
+
+类似于有理数\ref{subsec:rational-numbers}，定义减法：
+
+\begin{definition}[实数的减法]
+	设 $a=\{a_n\}^\infty_{n=1}$ 和 $b=\{b_n\}^\infty_{n=1}$ 是两个实数，则其加法定义为：
+	
+	$$
+	a-b = a + (-b)
+	$$
+\end{definition}
+
+\subsection{非零实数及其相反数}
+
+\example 观察实数 $0$：
+
+$$
+0 = \{1/n\}_{n=1}^\infty = \{1/2n\}_{n=1}^\infty
+$$
+
+
+\begin{theorem}[实数表示的不唯一性]
+	设 $a=\{a_n\}_{n=1}^\infty$ 是非零实数，则存在柯西列满足：
+	\begin{enumerate}
+		\item 存在 $c\in \mathbb Q$，使得$|b_n|\ge c$
+		\item $a=\{b_n\}^\infty_{n=1}$
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}[非退化柯西列]
+	设 $\{a_n\}^\infty_{n=1}$。当存在有理数 $c > 0$，使得对于任意$n\in \mathbb N$，有$|a_n| \ge c$。
+\end{definition}
+
+\maketip 这表明了 \textbf{对于任意一个非零实数，都可以表示为一个非退化的柯西列}。
+
+\begin{definition}[相反数]
+	设 $a = \{a_n\}^\infty_{n=1}$ 非 $0$，则其相反数被定义为：
+	
+	$$
+	a^{-1} = \{a_n^{-1}\} _{n=1}^\infty
+	$$
+\end{definition}
+
+\subsection{实数系统}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
