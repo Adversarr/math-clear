@@ -2,7 +2,7 @@
 
 \subsection{实数定义}
 
-\begin{definition}[有理数列]
+\begin{definition}{有理数列}{}
 	设 $m\in \mathbb Z$ 有理数列$\{a_n\}_{n=m}^\infty$是指任意的函数，从 $X=\{n\in \mathbb Z:n\ge m\}$ 映射到 $\mathbb Q$。更详细的说，其可以写作一列有理数：
 	
 	$$
@@ -10,41 +10,44 @@
 	$$
 \end{definition}
 
-\maketip 特别的，如果 $a_n=c\in \mathbb Q,\forall n\in X$ 则我们记作：
+\begin{note}
+    特别的，如果 $a_n=c\in \mathbb Q,\forall n\in X$ 则我们记作：
 
 $$
 \{c\}_{n=m}^\infty = \{a_n\}_{n=m}^\infty
 $$
 
-\begin{definition}[有理柯西列]
+\end{note}
+
+\begin{definition}{有理柯西列}{}
 	设有理数列 $\{a_n\}_{n=1}^\infty$，其被称为柯西列，当对于任意有理数$\varepsilon>0$存在正整数 $N$ 使得对于任意$m,n\ge N$，有$|a_m-a_n|< \varepsilon$。
 \end{definition}
 
-\begin{definition}[有理柯西列的等价性]
+\begin{definition}{有理柯西列的等价性}{}
 	设 $\{a_n\}_{n=1}^\infty$ 和 $\{b_n\}_{n=1}^\infty$ 都是柯西列，若 $\forall \varepsilon \in Q,\varepsilon > 0$，都存在自然数 $N$，使得对于任意 $n\ge N$ 有 $|a_n-b_n|< \varepsilon$，则称 $\{a_n\}_{n=1}^\infty$ 和 $\{a_n\}_{n=1}^\infty$ 是等价的。
 \end{definition}
 
-\begin{lemma}[有理柯西列的子列]
+\begin{lemma}{有理柯西列的子列}{}
 	有理柯西列的所有子列都是有理柯西列，且与原列等价。
 \end{lemma}
 
-\begin{lemma}[有界性]
+\begin{lemma}{有界性}{}
 	有理柯西列是有界的。
 \end{lemma}
 
-\begin{lemma}[加法、乘法封闭性]
+\begin{lemma}{加法、乘法封闭性}{}
 	两个有理柯西列的和/积是有理柯西列。
 \end{lemma}
 
-\begin{lemma}
+\begin{lemma}{}{}
 	设 $\{a_n\}^\infty_{n=1},\{a_n'\}^\infty_{n=1},\{b_n\}^\infty_{n=1},\{b_n'\}^\infty_{n=1}$ 是四个柯西序列，
 \end{lemma}
 
-\begin{definition}[实数]
-	\textbf{实数是有理柯西列}；实数的相等，定义为有理柯西列的等价。
+\begin{definition}{实数}{}
+	\textbf{{\heiti 实数是有理柯西列}}；实数的相等，定义为有理柯西列的等价。
 \end{definition}
 
-\begin{definition}[实数的加法]
+\begin{definition}{实数的加法}{}
 	设 $a=\{a_n\}^\infty_{n=1}$ 和 $b=\{b_n\}^\infty_{n=1}$ 是两个实数，则其加法定义为：
 	
 	$$
@@ -52,7 +55,7 @@ $$
 	$$
 \end{definition}
 
-\begin{definition}[实数的乘法]
+\begin{definition}{实数的乘法}{}
 	设 $a=\{a_n\}^\infty_{n=1}$ 和 $b=\{b_n\}^\infty_{n=1}$ 是两个实数，则其乘法定义为：
 	
 	$$
@@ -60,7 +63,7 @@ $$
 	$$
 \end{definition}
 
-\begin{definition}[实数的相反数]
+\begin{definition}{实数的相反数}{}
 	设 $a = \{a_n\}^\infty_{n=1}$ 是实数，则其相反数（记为$-a$）为
 	
 	$$
@@ -70,7 +73,7 @@ $$
 
 类似于有理数\ref{subsec:rational-numbers}，定义减法：
 
-\begin{definition}[实数的减法]
+\begin{definition}{实数的减法}{}
 	设 $a=\{a_n\}^\infty_{n=1}$ 和 $b=\{b_n\}^\infty_{n=1}$ 是两个实数，则其加法定义为：
 	
 	$$
@@ -80,14 +83,14 @@ $$
 
 \subsection{非零实数及其相反数}
 
-\example 观察实数 $0$：
+\begin{example} 观察实数 $0$：
 
 $$
 0 = \{1/n\}_{n=1}^\infty = \{1/2n\}_{n=1}^\infty
 $$
+\end{example}
 
-
-\begin{theorem}[实数表示的不唯一性]
+\begin{theorem}{实数表示的不唯一性}{}
 	设 $a=\{a_n\}_{n=1}^\infty$ 是非零实数，则存在柯西列满足：
 	\begin{enumerate}
 		\item 存在 $c\in \mathbb Q$，使得$|b_n|\ge c$
@@ -95,13 +98,15 @@ $$
 	\end{enumerate}
 \end{theorem}
 
-\begin{definition}[非退化柯西列]
+\begin{definition}{非退化柯西列}{}
 	设 $\{a_n\}^\infty_{n=1}$。当存在有理数 $c > 0$，使得对于任意$n\in \mathbb N$，有$|a_n| \ge c$。
 \end{definition}
 
-\maketip 这表明了 \textbf{对于任意一个非零实数，都可以表示为一个非退化的柯西列}。
+\begin{note}
+	这表明了\textbf{对于任意一个非零实数，都可以表示为一个非退化的柯西列}。
+\end{note}
 
-\begin{definition}[相反数]
+\begin{definition}{相反数}{}
 	设 $a = \{a_n\}^\infty_{n=1}$ 非 $0$，则其相反数被定义为：
 	
 	$$
@@ -111,10 +116,170 @@ $$
 
 \subsection{实数系统}
 
+\begin{note}
+	实数系统是指 $(\mathbb R, +, -, \times, \div)$
+\end{note}
 
+\begin{definition}{减法}{}
+	设 $a,b\in \mathbb R$ 则 $a$ 和 $b$ 的减法定义为 $a-b = a+ (-b)$。
+\end{definition}
 
+\begin{definition}{实数的商}{}
+	设 $a,b\in \mathbb R$ 且 $b \ne 0$ 则 $a/b$ 定义为 $a/b = a \times b ^{-1}$
+\end{definition}
 
+\begin{theorem}{代数运算规则}{}
+	设 $x,y,z\in \mathbb R$，则：
+$$
+\begin{aligned}
+	x+y&=y+x\\
+	(x+y)+z & = x+(y+z)\\
+	x+0 & = 0+x=x\\
+	x + (-x)& = (-x) + x = 0\\
+	xy&=yx\\
+	(xy)z & = x(yz)\\
+	x1&=1x=x\\
+	x(y+z) & = xy+xz\\
+	(y+z)x & = yx+zx
+\end{aligned}
+$$
+\end{theorem}
 
+\subsection{绝对值、序、距离}
+
+\begin{definition}{正数、负数}{}
+	实数 $a$ 是正的，如果其对应的柯西列满足对于某个有理数 $c$ 由 $a_n \ge c, n\in \mathbb N$。反之，若其可以写作 $a=-b$ 且 $b$ 为正数，那么称 $a$ 是负的。
+\end{definition}
+
+和有理数相同，我们可以得到实数的三奇性：
+
+\begin{proposition}{}{}
+	设 $a\in \mathbb R$ 则下列三条结论成立且仅成立一条：
+	
+	\begin{enumerate}
+		\item $a$ 是 0
+		\item $a$ 是正的
+		\item $a$ 是负的
+	\end{enumerate}
+\end{proposition}
+
+\begin{note}
+	可以直接用定义证明。
+\end{note}
+
+\begin{proposition}{}{}
+	设 $a\in \mathbb R$ 则下列命题是等价的：
+	
+	\begin{enumerate}
+		\item $a > 0$
+		\item 存在有理数 $c > 0$ 和柯西列 $\{a_n\}= a$，使存在某个$N \in \mathbb N, \forall n \ge N,a_n \ge c$
+		\item 存在有理数 $d > 0$ 使得对于任意 $\{a_n\} = a$，存在 $N'\in \mathbb N$ 满足 $\forall n\in \mathbb N,a_n \ge d$
+	\end{enumerate}
+\end{proposition}
+
+\begin{theorem}{实数的基本性质}{}
+	设 $a,b\in \mathbb R$ 下列命题成立：
+	
+	\begin{enumerate}
+		\item $a$ 是负的，当且仅当 $-a$ 是正的；
+		\item 如果 $a,b$ 都是正数，则 $a+b$ 和 $a\times b$ 都是正数
+		\item 如果 $a,b$ 都是负数，则 $a+b$ 是负数，$a\times b$ 是正数
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}{绝对值}{}
+	设 $a\in \mathbb R$。则 $a$ 的绝对值（记作$|a|$）定义为：
+	\begin{enumerate}
+		\item 若 $a=0$，则 $|a|=0$
+		\item 若 $a > 0$，则 $|a|=a$
+		\item 若 $a < 0$，则 $|a|=-a$
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{实数的距离}{}
+	设 $a,b\in \mathbb R$ 则其距离为 $d(a,b) = |a-b|$。
+\end{definition}
+
+\begin{definition}{实数的序}{}
+	设 $a,b\in \mathbb R$，我们称 $a$ 大于 $b$（记为$a>b$），当 $a-b$ 是正数。反之，我们称 $a$ 小于 $b$（记作$a<b$），当 $a-b$ 是负数。另外的，我们定义 $a\ge b$ 当 $a > b$ 或 $a=b$；$a\le b$ 当 $a < b$ 或 $a=b$。
+\end{definition}
+
+\begin{theorem}{实数序的性质}{}
+	设 $a,b\in \mathbb R$ 则下列命题等价：
+	\begin{enumerate}
+		\item $a>b$
+		\item 存在有理数 $c > 0$，和两个柯西列，使得 $\{a_n\} = a$ 和 $\{b_n\} = b$ 且由 $a_n - b_n \ge c$
+		\item 存在有理数 $d > 0$ 使得对于任何两个柯西列 $\{a'_n\} = a$ 和 $\{b_n'\} = b$，存在一个 $N'\in \mathbb N$ 使得 $a_n-b_n \ge d(n\ge N')$
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}{实数序的性质}{}
+	设 $a,b, c \in \mathbb R$ 则下列命题成立：
+	
+	\begin{enumerate}
+		\item $a<b,~a=b,~a<b$ 三者成立其一；
+		\item 若 $a>b$ 且 $b>c$ 则 $a>c$
+		\item 若 $a > b$ 且 $c$ 是正数，则 $ac > bc$
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}{}{}
+	设 $a,b\in \mathbb R$ 是正实数，则下列命题成立：
+	
+	\begin{enumerate}
+		\item $a^{-1}$ 是正数
+		\item 若 $a> b$ 则 $a^{-1} < b ^{-1}$
+	\end{enumerate}
+\end{corollary}
+
+\begin{theorem}{绝对值的基本性质}{}
+	设 $a,b,c\in \mathbb R$ 则下列命题成立：
+	
+	\begin{enumerate}
+		\item (\textbf{非退化性}) $0\le |a|$ 且 $|a| = 0 \iff a = 0$
+		\item (\textbf{三角不等式}) $|a+b| \le |a| + |b|$
+		\item $-b \le a \le b \iff |a| \le b$
+		\item $|ab| = |a| |b|$。
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}{距离的基本性质}{}
+	设 $a,b,c\in \mathbb R$ 则下列命题成立：
+	
+	\begin{enumerate}
+		\item (\textbf{非退化性}) $0\le d(a,b)$ 且 $d(a,b) = 0 \iff a = b$
+		\item (\textbf{对称性}) $d(a,b) = d(b, a)$
+		\item (\textbf{三角不等式}) $d(a,c) \le d(a,b) + d(b,c)$
+	\end{enumerate}
+\end{theorem}
+
+\subsection{阿基米德性质}
+
+\begin{proposition}{}{}
+	设 $a = \{a_n\}$ 是非负有理柯西列，则 $a$ 是非负实数。
+\end{proposition}
+
+\begin{corollary}{}{}
+	设 $a = \{a_n\}$，$b = \{b_n\}$ 是两个柯西列。若 $a_n\ge b_n,\forall n$ 则 $a \ge b$
+\end{corollary}
+
+\begin{proposition}{}{}
+	设 $a\in \mathbb R$ 是正数，则存在两个数 $q\in \mathbb Q, N\in \mathbb Z$ 使得 
+	
+	$$
+	0 < q \le a \le N.
+	$$
+\end{proposition}
+
+\begin{theorem}{阿基米德性质}{}
+	设 $a,\varepsilon \in \mathbb R$ 为正数，则存在正整数 $M > 0$ 使得 $a < M\varepsilon$。
+\end{theorem}
+
+\maketip{表明了不存在\textbf{最大}数。}
+
+\begin{proposition}{}{}
+	设 $a,b\in \mathbb R$，且 $a<b$。则存在 $q\in \mathbb Q$ 使得 $a<q<b$。
+\end{proposition}
 
 
 

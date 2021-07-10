@@ -1,0 +1,49 @@
+\section{实数上的极限理论}
+
+\begin{definition}{极限}{}
+	设 $\{a_n\}\subseteq \mathbb R$，且 $a\in \mathbb R$。我们称 $\{a_n\}$ 收敛到 $a$，当所有的实数 $\varepsilon > 0$ 有一个 $N\in \mathbb N$ 使得：
+	
+$$
+|a_n - a | < \varepsilon
+$$
+\end{definition}
+
+\begin{theorem}{柯西收敛原理}{}
+	设 $\{a_n\}$ 是\textbf{实数列}，则下列命题等价：
+	
+	\begin{enumerate}
+		\item $\{a_n\}$ 是收敛的；
+		\item 对于任意实数 $\varepsilon > 0$，存在一个 $N\in \mathbb N$ 使得对于任何 $m,n\ge N$ 都有 $|a_m - a_n| < \varepsilon$
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}{维尔斯特拉斯-单调有界定理}{}
+	设 $\{a_n\}$ 是实数列，若单调增有上界，或单调减有下界则收敛。
+\end{theorem}
+
+\begin{theorem}{康托-闭区间套原理}{}
+	设 $\{I_n\}$ 是一系列闭区间，若 $I_1\sup I_2 \sup \cdots \supset I_n\supset\cdots$，且 $b_n - a_n \rightarrow 0~(n\rightarrow \infty)$ 则 $a = \lim_{n\rightarrow \infty } a_n = \lim _{n\rightarrow \infty} b_n$。
+\end{theorem}
+
+\begin{theorem}{确界存在定理}{}
+	设 $A\subset R$ 是非空有界集，则其上下界存在且唯一。
+\end{theorem}
+
+\begin{theorem}{波尔萨诺-维尔斯特拉斯定理}{}
+	有界数列必有收敛子列。
+\end{theorem}
+
+\begin{theorem}{海涅-有限覆盖定理}{}
+	设 $\mathcal F$ 是一族开区间，$F$ 是满足 $F\subset \bigcup _{O\in \mathcal F} O$ 的有界紧集，则存在有限的开区间（覆盖）使得 $F\subset \bigcup _{n=1} ^m O_n$
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+

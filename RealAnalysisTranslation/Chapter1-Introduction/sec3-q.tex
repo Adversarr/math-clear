@@ -2,43 +2,47 @@
 
 \subsection{有理数的定义}\label{subsec:rational-numbers}
 
-\begin{definition}[有理数]
+\begin{definition}{有理数}{}
 	设 $a,b\in \mathbb Z$ 且 $b\ne 0$，有理数是指有形如 $a//b$ 的表达式。我们说 $a//b$ 和 $c//d$ 是相等的，当$ad=cb$。有理数集表示为$\mathbb Q$ 
 \end{definition}
 
-\begin{definition}[有理数加法]
+\begin{definition}{有理数加法}{}
 	\textbf{两个有理数的和}表示为 $a//b + c//d =(ad+cb) // bd$
 \end{definition}
 
-\begin{definition}[有理数乘法]
+\begin{definition}{有理数乘法}{}
 	两个有理数的积定义为 $(a//b) \times (c//d) = (ac)//(bd)$
 \end{definition}
 
-\begin{definition}[相反数]
+\begin{definition}{相反数}{}
 	有理数的相反数为：$-(a//b) = (-a)//b$。
 \end{definition}
 
-\begin{theorem}
+\begin{theorem}{}{}
 	设 $x = a//b \in \mathbb Q$ 则 $x=0\iff a=0$
 \end{theorem}
 
-\begin{definition}[倒数]
+\begin{definition}{倒数}{}
 	设 $x=a//b\ne 0$ 是有理数，则$x$的倒数为$x^{-1} = b//a$。
 \end{definition}
 
-\maketip{有这些定义，我们可以定义加法、乘法的逆运算。}
+\begin{note}
+	有这些定义，我们可以定义加法、乘法的逆运算。
+\end{note}
 
-\begin{definition}[减法]
+\begin{definition}{减法}{}
 	设 $x,y\in \mathbb Q$ 则 $x-y$ 定义为 $x-y=x+(-y)$。
 \end{definition}
 
-\begin{definition}[除法]
+\begin{definition}{除法}{}
 	设 $x,y\in \mathbb{Q}$，其商被定义为 $x/y = x\times y^{-1}$。
 \end{definition}
 
-\maketip{在这里我们能看到，$a//b$实际上就可以看作$a/b$，但我们不能预先这样定义。}
+\begin{note}
+	在这里我们能看到，$a//b$实际上就可以看作$a/b$，但我们不能预先这样定义。
+\end{note}
 
-\begin{theorem}[有理数的代数运算法则]
+\begin{theorem}{有理数的代数运算法则}{}
 	设 $x,y,z\in \mathbb Q$，则：
 $$
 \begin{aligned}
@@ -57,11 +61,11 @@ $$
 
 \end{theorem}
 
-\begin{definition}[正、负]
+\begin{definition}{正、负}{}
 	如果$a$ 和 $b$都是正的，则有理数 $x=a//b$ 是正的。如果存在正有理数 $x=-y$ 则称 $y$ 是负的。
 \end{definition}
 
-\begin{lemma}
+\begin{lemma}{}{}
 	设 $x,y\in \mathbb Q$，则
 	\begin{enumerate}
 		\item $x+(-x) = 0$；
@@ -70,7 +74,7 @@ $$
 	\end{enumerate}
 \end{lemma}
 
-\begin{theorem}[有理数的三奇性]
+\begin{theorem}{有理数的三奇性}{}
 	设 $x\in \mathbb Q$ 则下列结论成立且仅成立其一：
 	
 	\begin{enumerate}
@@ -82,13 +86,13 @@ $$
 
 \subsection{有理数的序}
 
-\begin{definition}[有理数的序]
+\begin{definition}{有理数的序}{}
 	设 $x,y\in \mathbb Q$，则当 $x-y$ 为正时，我们称 $x$ \textbf{大于} $y$，即$x>y$或$y<x$；当 $y-x$ 为正时，我们称 $x$ \textbf{小于} $y$，即$x<y$ 或 $y>x$。
 	
 	\noindent 另外，$x=y$或$x>y$ 记作 $x\ge y$，$x=y$或$x<y$ 记作 $x\le y$。
 \end{definition}
 
-\begin{theorem}[序的基本性质]
+\begin{theorem}{序的基本性质}{}
 	设 $x,y,z\in \mathbb Q$，则下列结论成立：
 	\begin{enumerate}
 		\item 三条结论成立且仅成立其一：$x> y, \quad x=y,\quad x < y$；
@@ -103,7 +107,7 @@ $$
 
 \subsection{绝对值、有理数的距离}
 
-\begin{definition}
+\begin{definition}{绝对值}{}
 	设 $x\in \mathbb Q$。则 $x$ 的绝对值（记作$|x|$）定义为：
 	\begin{enumerate}
 		\item 若 $x=0$，则 $|x|=0$
@@ -112,11 +116,11 @@ $$
 	\end{enumerate}
 \end{definition}
 
-\begin{corollary}
+\begin{corollary}{}{}
 	对于任意 $x\in \mathbb Q$，有$\pm x \le |x|$。
 \end{corollary}
 
-\begin{theorem}[绝对值的基本性质]
+\begin{theorem}{绝对值的基本性质}{}
 	设 $x,y,z\in \mathbb Q$，下列结论成立：
 	\begin{enumerate}
 		\item (\textbf{非负性}) $|x| \ge 0$，且$|x|=0\iff x=0$；
@@ -126,11 +130,11 @@ $$
 	\end{enumerate}
 \end{theorem}
 
-\begin{definition}[距离]
+\begin{definition}{距离}{}
 	设 $x,y\in \mathbb Q$，则 $x$ 和 $y$ 之间的距离定义为 $|x-y|$，写作 $d(x,y)=|x-y|$。
 \end{definition}
 
-\begin{theorem}[距离的基本性质]
+\begin{theorem}{距离的基本性质}{}
 	设 $x,y,z\in \mathbb Q$，下列结论成立：
 	\begin{enumerate}
 		\item (\textbf{非负性}) $d(x,y)\ge 0$ 且 $d(x,y)=0\iff x=y$；
@@ -139,11 +143,13 @@ $$
 	\end{enumerate}
 \end{theorem}
 
-\begin{theorem}
+\begin{theorem}{}{}
 	设 $x\in Q$，则存在唯一的$n\in Z$ 使得 $n\le x < n+1$。
 \end{theorem}
 
-\begin{proof} 记$x = a//b,\quad ab\in\mathbb Z,b>0$，先证明存在性：
+\begin{proof} 
+	记$x = a//b,\quad ab\in\mathbb Z,b>0$，先证明存在性：
+
 \begin{enumerate}
 	\item $a\ge 0$ 用欧几里得算法，可得到两个数 $a=nb+r$，则
 	
@@ -172,13 +178,18 @@ $$
 $$
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}{稠密性}{}
 	设 $x,y\in \mathbb Q$ 且 $x < y$，则存在 $z\in \mathbb Q$，使得 $x<z<y$。
 \end{theorem}
 
-\maketip{直接构造$z=(x+y)/2$}
+\begin{note}
+	直接构造$z=(x+y)/2$
+\end{note}
 
-\maketip{也表明了两个有理数之间必然存在\textbf{无穷多个}有理数。}
+\begin{note}
+	也表明了两个有理数之间必然存在\textbf{无穷多个}有理数。
+\end{note}
+
 
 
 

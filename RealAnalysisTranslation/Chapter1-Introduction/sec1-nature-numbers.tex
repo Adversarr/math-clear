@@ -28,33 +28,33 @@ $$
 
 我们定义的这个系统的\textbf{公理}如下：
 
-\begin{axiom}
+\begin{axiom}{}{}
 	$0$ 是自然数
 \end{axiom}
 
-\begin{axiom}
+\begin{axiom}{}{}
 	自然数的增长也是自然数
 \end{axiom}
 
-\begin{axiom}
+\begin{axiom}{}{}
 	$0$ 不是任何自然数的增长
 \end{axiom}
 
-\begin{axiom}
+\begin{axiom}{}{}
 	不同的自然数的增长不同。
 \end{axiom}
 
-\begin{axiom}[归纳原理]\label{thm:Induct-Axiom}
+\begin{axiom}{归纳原理}{Induct-Axiom}
 	若$p(n)$是一个与自然数相关的性质。假设$p(0)$成立，且对于任意的自然数$n$而言，$p(n)$成立是$p(n+1)$成立的充分条件。那么$p(n)$对于所有的自然数都成立。
 \end{axiom}
 
-\maketip{
+\begin{note}
 	\begin{enumerate}
 		\item 第三条表明了不会出现如 $3\ne 0$ 的情况；
 		\item 第四条表明了不会出现 $3\ne 2$ 这样的情况；
 		\item 第五条保证了自然数的增长操作产生的是两两不相同的数，是从\textbf{有限}到\textbf{无限}的过程。
 	\end{enumerate}
-}
+\end{note}
 
 \subsection{自然数的加法}
 
@@ -65,17 +65,21 @@ $$
 	\item 函数$f:\mathbb N \rightarrow \mathbb N$
 \end{enumerate}
 
-\begin{theorem}[递归定义]\label{thm:RecursiveDefinition}
+\begin{theorem}{递归定义}{RecursiveDefinition}
 	假设对于任意的自然数$n\in \mathbb N$，都存在一个函数 $f_n:\mathbb N\rightarrow \mathbb N$。设$c$是一个自然数，则对于任意的$n\in \mathbb N$，都存在唯一的$a_n\in \mathbb N$使得$a_0=c$且$a_{n++} = f_n(a_n)$。
 \end{theorem}
 
-\maketip{也就是说，我们可以通过一个初值和一个函数去\textbf{构造}一个无穷数列}
+\begin{note}
+	也就是说，我们可以通过一个初值和一个函数去\textbf{构造}一个无穷数列
+\end{note}
 
-\begin{definition}[自然数的加法]
+\begin{definition}{自然数的加法}{}
 	设 $m,n\in \mathbb{N}$，首先定义出 $0+m:=m$。假设 $n+m$ 已经定义，可以定义$(n++)+m:=(n+m)++$。
 \end{definition}
 
-\maketip{这里我们的函数是$f(n)=n++,\quad n\in \mathbb N$，利用归纳原理和递归定义，可以得到$m+n$的定义。例如：}
+\begin{note}
+	这里我们的函数是$f(n)=n++,\quad n\in \mathbb N$，利用归纳原理和递归定义，可以得到$m+n$的定义。例如：
+\end{note}
 
 \[
 \begin{aligned}
@@ -85,7 +89,7 @@ $$
 \end{aligned}
 \]
 
-\begin{theorem}[封闭性]
+\begin{theorem}{封闭性}{}
 	设 $m,n\in \mathbb N$ 则 $n+m\in \mathbb N$。
 \end{theorem}
 
@@ -93,27 +97,31 @@ $$
 
 下面我们关注加法的交换律：
 
-\begin{lemma}\label{lem1}
+\begin{lemma}{}{lem1}
 	设 $m\in \mathbb N$ 则 $m+0=m$。
 \end{lemma}
 
-\maketip{直接用数学归纳法证明}
+\begin{note}
+	直接用数学归纳法证明
+\end{note}
 
-\begin{lemma}
+\begin{lemma}{}{}
 	设 $m,n\in \mathbb N$ 则 $n+(m++)=(n+m)++$。
 \end{lemma}
 
-\maketip{固定$m$，利用引理\ref{lem1}的结论和加法的定义式。}
+\begin{note}
+	固定$m$，利用引理\ref{lem:lem1}的结论和加法的定义式。
+\end{note}
 
-\begin{corollary}
+\begin{corollary}{}{}
 	若 $m\in \mathbb N$ 则有 $m++=m+1=1+m$。
 \end{corollary}
 
 通过以上的三个结论，我们可以得到自然数加法的交换律：
 
-\begin{theorem}[交换律]
+\begin{property}{交换律}{}
 	设 $m,n\in \mathbb N$ 则 $n+m=m+n$。
-\end{theorem}
+\end{property}
 
 \begin{proof}
 	即证明：$n+(m++)=(n++)+m$
@@ -123,29 +131,33 @@ $$
 
 下面的定理证明不再有详细的证明：
 
-\begin{theorem}[结合律]
+\begin{property}{结合律}{}
 	若 $a,b,c\in \mathbb N$ 则 $(a+b)+c = a+(b+c)$
-\end{theorem}
+\end{property}
 
-\maketip{三个自然数数的归纳法，依然是固定一个，对另外的进行归纳。}
+\begin{note}
+	三个自然数数的归纳法，依然是固定一个，对另外的进行归纳。
+\end{note}
 
-\begin{theorem}[消去律]
+\begin{property}{消去律}{}
 	设 $a,b,c\in \mathbb N$ 若 $a+b=a+c$ 则 $b=c$
-\end{theorem}
+\end{property}
 
 至此，我们得到了自然数的概念。这使得我们可以在下一小节中，依此定义构筑自然数的''序''的概念。
 
 最后，我们在这里给出正数的概念：
 
-\begin{definition}[正整数]
+\begin{definition}{正整数}{positive-integers}
 	正数是指一个 $m\in \mathbb N$，且满足 $m$ 不等于 $0$。
 \end{definition}
 
-\begin{theorem}
+\begin{proposition}{}{}
 	设 $m$，$n$ 是自然数，若 $m$ 是正数，那么 $m+n$ 也是正数
-\end{theorem}
+\end{proposition}
 
-\maketip{设$a,b\in \mathbb N$，若 $a+b=0$，则 $a=0$ 且 $b=0$}
+\begin{note}
+	设$a,b\in \mathbb N$，若 $a+b=0$，则 $a=0$ 且 $b=0$
+\end{note}
 
 \subsection{自然数的序}
 
@@ -155,11 +167,11 @@ $$
 \ge,\quad =,\quad\le,\quad\le,\quad >,\quad <
 $$
 
-\begin{definition}[自然数的序]
+\begin{definition}{自然数的序}{}
 	设 $m,n\in \mathbb N$。若存在 $a\in \mathbb N$，使得$n=m+a$，则称 $n$ 大于等于 $m$，记作 $n\le m$ 或 $m\le n$。若 $n\ge m$ 且 $n\ne m$ 则称 $n$ 大于 $m$ 记作 $n > m$ 或 $m < n$。
 \end{definition}
 
-\begin{theorem}[序的基本性质]
+\begin{property}{序的基本性质}{}
 	设 $a,b,c\in \mathbb N$，下式成立：
 	\begin{itemize}
 		\item $a\ge a$；
@@ -168,9 +180,9 @@ $$
 		\item $a \ge b$ 当且仅当 $a+c\ge b+c$ 对于所有正整数或对于某个 $c\in \mathbb N$ 成立；
 		\item $a < b$ 当且仅当存在一个正数 $d\in \mathbb N$ 使得 $b=a+d$ 或 $a++\le b$。
 	\end{itemize}
-\end{theorem}
+\end{property}
 
-\begin{theorem}[三奇性]
+\begin{theorem}{三奇性}{}
 	若 $a,b\in \mathbb N$ 则下列结论成立且仅成立一个：
 	
 	$$
@@ -178,38 +190,44 @@ $$
 	$$
 \end{theorem}
 
-\maketip{仅仅成立一个是容易证的，只需要使用反证法即可。但证明有一个成立是难的，需要固定其中一个($a$ 或 $b$)，再使用归纳法证明。}
+\begin{note}
+	仅仅成立一个是容易证的，只需要使用反证法即可。但证明有一个成立是难的，需要固定其中一个($a$ 或 $b$)，再使用归纳法证明。
+\end{note}
 
 \subsection{自然数的乘法}
 
-\begin{definition}
+\begin{definition}{自然数的乘法}{}
 	设 $m,n \in \mathbb N$。定义 $0 \times m = 0$，假设 $n\times m$ 已经定义，则我们定义 $(n++)\times m = (n\times m) + m$
 \end{definition}
 
-\maketip{这里的定义与加法相同，用了递归定义\ref{thm:RecursiveDefinition}来进行定义。其中 $f_m(n) = n+m$，则$a_{n++} = f(a_n)$。}
+\begin{note}
+	这里的定义与加法相同，用了递归定义\ref{thm:RecursiveDefinition}来进行定义。其中 $f_m(n) = n+m$，则$a_{n++} = f(a_n)$。
+\end{note}
 
-利用归纳原理\ref{thm:Induct-Axiom}，可以得到以下关于乘法的性质：
+利用归纳原理\ref{axi:Induct-Axiom}，可以得到以下关于乘法的性质：
 
-\begin{theorem}[乘法的封闭性]
+\begin{property}{乘法的封闭性}{}
 	乘法对自然数集是封闭的，即若$m,n\in \mathbb N$，那么 $m\times n\in \mathbb N$
-\end{theorem}
+\end{property}
 
-\begin{theorem}[交换律]
+\begin{property}{交换律}{}
 	乘法满足交换律，即若 $m,n\in \mathbb N$，那么$n\times m = m\times n$。
-\end{theorem}
+\end{property}
 
-\maketip{下面，我们直接用 $ab$ 表示 $a\times b$}
+\begin{note}
+	下面，我们直接用 $ab$ 表示 $a\times b$
+\end{note}
 
-\begin{theorem}[乘法的其他性质]
+\begin{property}{乘法的其他性质}{}
 	设 $a,b\in \mathbb N$，那么下列结论成立：
 	\begin{itemize}
 		\item 若 $a,b$ 为正数，那么 $ab$ 也是正数；
 		\item $ab=0$ 当且仅当$a=0$或$b=0$；
 		\item $ab\ne 0$ 当且仅当 $a\ne 0$ 且 $b\ne 0$
 	\end{itemize}
-\end{theorem}
+\end{property}
 
-\begin{theorem}[分配律]
+\begin{property}{分配律}{}
 	若 $a,b,c\in \mathbb N$ 那么：
 	$$
 	a(b+c) = ab+ac
@@ -218,9 +236,9 @@ $$
 	$$
 	(b+c)a = ba+ca
 	$$
-\end{theorem}
+\end{property}
 
-\begin{theorem}[结合律]
+\begin{theorem}{结合律}{}
 	若 $a,b,c\in\mathbb N$ 则
 	$$
 	(ab)\times c = a\times (bc)
@@ -228,21 +246,23 @@ $$
 \end{theorem}
 
 
-\begin{theorem}[保序性]
+\begin{theorem}{保序性}{}
 	设 $a,b\in \mathbb N$，且 $a<b$。若 $c\in \mathbb N$ 为正数，则 $ac<bc$。
 \end{theorem}
 
-\begin{theorem}[消去律]
+\begin{theorem}{消去律}{}
 	设$a,b,c\in \mathbb N$，且 $ac=bc$。若 $c$ 为正数，则$a=b$。
 \end{theorem}
 
-\begin{theorem}[欧几里得算法]
+\begin{theorem}{欧几里得算法}{}
 	设 $n\in \mathbb N$，且 $q\in \mathbb N$为正数，则存在两个自然数，使得$0\le r < q$ 且 $n=mq+r$。
 \end{theorem}
 
-\maketip{欧几里得算法是\textbf{数论}的起始点。}
+\begin{note}
+	欧几里得算法是\textbf{数论}的起始点。
+\end{note}
 
-\begin{definition}[幂]
+\begin{definition}{幂}{}
 	设 $m\in \mathbb N$，则定义 $m^0=1$，递归定义出$m^{n++}=m^n\times m$
 \end{definition}
 

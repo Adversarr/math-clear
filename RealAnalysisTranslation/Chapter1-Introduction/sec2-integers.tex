@@ -2,21 +2,25 @@
 
 \subsection{整数的定义}
 
-\begin{definition}[整数]
+\begin{definition}{整数}{}
 	设 $a,b\in \mathbb N$，整数是指有这样的形式 $a\smile b$。如果$a+d=b+c$，那么两个整数$a\smile b, c\smile d$是\textbf{相等}的。整数的全体被记为为$\mathbb Z$。
 \end{definition}
 
-\begin{definition}[加法]
+\begin{definition}{加法}{}
 	两个整数的和为 $(a\smile b) + (c\smile d) = (a+c)\smile (b+d)$。
 \end{definition}
 
-\begin{definition}[乘法]
+\begin{definition}{乘法}{}
 	两个整数的乘积为 $(a\smile b) \times (c\smile d) = (ac+bd)\smile(ad+bc)$
 \end{definition}
 
-\maketip{很显然，这里的 $\smile$ 就是我们看到的减法，但是我们在这里没有定义减法，故用这个符号代替。实际上我们只需要一个有序数对，也就是用有序自然数对来表示整数$(a,b)$。}
+\begin{note}
+	很显然，这里的 $\smile$ 就是我们看到的减法，但是我们在这里没有定义减法，故用这个符号代替。实际上我们只需要一个有序数对，也就是用有序自然数对来表示整数$(a,b)$。
+\end{note}
 
-\maketip{这个定义下的''相等''关系具有自反性、对称性、传递性。并且满足代入定理}
+\begin{note} 
+	这个定义下的''相等''关系具有自反性、对称性、传递性。并且满足代入定理
+\end{note}
 
 $$
 a\smile b = a'\smile b' \Rightarrow 
@@ -26,15 +30,15 @@ a\smile b = a'\smile b' \Rightarrow
 \end{cases}
 $$
 
-\begin{definition}[负数]
+\begin{definition}{负数}{}
 	设 $a\smile b$ 是整数，其相反数定义为 $(b\smile a)$，记作 $-(a\smile b)$
 \end{definition}
 
-\begin{corollary}
+\begin{corollary}{}{}
 	设 $m,n\in \mathbb N$ 则 $(-n)m = n(-m) = -(nm)$。
 \end{corollary}
 
-\begin{lemma}
+\begin{lemma}{}{}
 	设 $x\in Z$ 则下列三条结论成立且仅成立一个：
 	\begin{enumerate}
 		\item $x$ 是 0；
@@ -43,7 +47,7 @@ $$
 	\end{enumerate}
 \end{lemma}
 
-\begin{theorem}[整数的代数运算规则]
+\begin{theorem}{整数的代数运算规则}{}
 	设 $x,y,z\in \mathbb Z$，则：
 	$$
 	\begin{aligned}
@@ -62,45 +66,45 @@ $$
 
 从而，我们可以定义减法。实际上，我们可以得出结论：每一个整数都是两个自然数的差。
 
-\begin{definition}[减法]
+\begin{definition}{减法}{}
 	设 $x, y\in \mathbb Z$，则其差被定义为：$x-y= x+(-y)$
 \end{definition}
 
-\begin{theorem}
+\begin{proposition}{}{}
 	设 $x,y\in \mathbb N$，则$x-y=x\smile y$。
-\end{theorem}
+\end{proposition}
 
-\begin{theorem}
+\begin{proposition}{}{}
 	设 $a\in \mathbb Z$，则$a + (-a) = 0$。
-\end{theorem}
+\end{proposition}
 
-\begin{theorem}
+\begin{proposition}{}{}
 	设 $a\in \mathbb Z$，则$a = 0 \iff (-a) = 0$。
-\end{theorem}
+\end{proposition}
 
-\begin{theorem}
+\begin{proposition}{}{}
 	设 $a,b\in \mathbb Z$，则$a=b\iff a-b = 0$。
-\end{theorem}
+\end{proposition}
 
-\begin{theorem}
+\begin{proposition}{}{}
 	设 $a,b\in \mathbb Z$，则$ab=0 \iff a = 0$ 或 $b=0$。
-\end{theorem}
+\end{proposition}
 
-\begin{theorem}
+\begin{proposition}{}{}
 	设 $a,b, c\in \mathbb Z$，则$ab-ac=a(b-c)$。
-\end{theorem}
+\end{proposition}
 
-\begin{theorem}
+\begin{proposition}{}{}
 	设 $a,b, c\in \mathbb Z$，则$ac=bc$时，若$c\ne 0$ 则 $a=b$。
-\end{theorem}
+\end{proposition}
 
 \subsection{整数的序}
 
-\begin{definition}
+\begin{definition}{序}{}
 	设 $a,b\in \mathbb Z$。当存在$n\in \mathbb N$，使得$a=b+n$，我们称$a$ 大于等于$b$，记作 $a \ge b$ 或 $b \le a$。当 $a \ne b$ 且 $a\ge b$ 时，我们称 $a$ 大于 $b$，记作$a>b$或$b<a$。
 \end{definition}
 
-\begin{theorem}[整数的序的性质]
+\begin{theorem}{整数的序的性质}{}
 	设 $a,b,c\in \mathbb Z$ 则：
 	\begin{enumerate}
 		\item $a> b\iff a-b$时一个正实数

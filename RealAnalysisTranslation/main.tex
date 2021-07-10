@@ -1,4 +1,4 @@
-\documentclass[UTF8, a4paper, oneside]{scrbook}
+\documentclass[cn]{elegantbook}
 \usepackage{amsmath}
 \usepackage{ctex}
 \usepackage{amsfonts}
@@ -10,22 +10,25 @@
 	allcolors=blue
 }
 
-\newtheorem{theorem}{定理}[section]
-\newtheorem{axiom}{公理}[section]
-\newtheorem{definition}{定义}[section]
-\newtheorem{proof}{证明}[section]
-\newtheorem{lemma}{引理}[section]
-\newtheorem{corollary}{推论}[section]
-\newcommand{\example}{\noindent \textbf{{\heiti 例}}\quad}
+% \newtheorem{axiom}{公理}[section]
+% \newtheorem{theorem}{定理}[section]
+% \newtheorem{definition}{定义}[section]
+% \newtheorem{proof}{证明}[section]
+% \newtheorem{lemma}{引理}[section]
+% \newtheorem{corollary}{推论}[section]
+% \newtheorem{proposition}{命题}[subsection]
+% \newcommand{\example}{\noindent \textbf{{\heiti 例}}\quad}
 
-\newcommand{\maketip}[1][~]{{\noindent\textsc{{\large Tips}}\space\space{#1}}}
+
+\newcommand{\maketip}[1][~]{{\noindent\quad\textsc{{\large Tips}}\space\space{#1}}}
 
 \title{实变函数和泛函分析}
 \date{\today}
-\author{Jerry Yang}
+\author{Tools Man}
+\version{0.0.0}
+\cover{logo.jpg}
 
 \begin{document}
-\frontmatter
 \maketitle
 \tableofcontents
 
@@ -33,7 +36,7 @@
 
 \include{Chapter1-Introduction/ch1}
 
-
+\include{Chapter2-Sets/ch2}
 \backmatter
 
 \end{document}
